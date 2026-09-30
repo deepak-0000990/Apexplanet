@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My First Webpage</title>
+<style>
+  :root {
+    --bg: #f4f7f5;
+    --card: #ffffff;
+    --teal: #1a6b5c;
+    --teal-dark: #0f463b;
+    --text: #2b2b2b;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+  }
+  .page {
+    background: var(--card);
+    max-width: 600px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  h1 {
+    color: var(--teal-dark);
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  p {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  a {
+    color: var(--teal);
+    font-weight: 600;
+  }
+  button {
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  button:hover {
+    background: var(--teal-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14201c;
+      --card: #1d2b26;
+      --text: #eee;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <!-- HTML: heading, paragraph, image, link -->
+    <h1>Welcome to My First Webpage</h1>
+    <p>This is a simple paragraph showing basic text content. HTML gives the page its structure — headings, text, images, and links all start here.</p>
+    <img src="./images.jpg" alt="Random demo image">
+    <p>Here's a link to <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>, added using an anchor tag.</p>
+
+    <!-- JavaScript: button interactivity -->
+    <button onclick="alert('Hello! You clicked the button.')">Click Me</button>
+  </div>
+</body>
+</html>
