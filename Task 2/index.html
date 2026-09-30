@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f3">
+  <title>Fieldnotes — Make room for good work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Fieldnotes home"><span class="brand-mark">f.</span><span>fieldnotes</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#about">Our approach</a><a href="#workspace">Workspace</a><a href="#contact" class="nav-cta">Say hello <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero page-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> A little more intentional</p>
+        <h1>Make Plan for<br><em>good work.</em></h1>
+        <p class="hero-text">A calm corner of the internet to gather your thoughts, find your focus, and make the next small thing happen.</p>
+        <a class="button button-dark" href="#workspace">Find your flow <span>↓</span></a>
+        <div class="hero-note"><span class="avatar-stack"><i>J</i><i>M</i><i>A</i></span><span>Made for your kind of day</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a calm creative workspace">
+        <div class="sun"></div><div class="art-label">MONDAY, AT YOUR PACE</div>
+        <div class="plant plant-one"><i></i><i></i><i></i><b></b></div>
+        <div class="desk"><div class="desk-top"></div><div class="desk-leg"></div><div class="desk-leg second"></div></div>
+        <div class="laptop"><div class="laptop-screen"><span>take a breath</span><i>✳</i></div><div class="laptop-base"></div></div>
+        <div class="mug"><span></span></div><div class="book book-one"></div><div class="book book-two"></div>
+        <div class="art-caption">A softer way to get things done <span>✳</span></div>
+      </div>
+      <div class="hero-side">LESS RUSH, MORE ROOM <span>✳</span></div>
+    </section>
+
+    <section class="intro page-wrap" id="about">
+      <p class="eyebrow">A practice, not a productivity hack</p>
+      <h2>Small steps make<br>space for <em>big things.</em></h2>
+      <p>Start where you are. Put the next thing on paper. Give it the attention it deserves.</p>
+    </section>
+
+    <section class="workspace page-wrap" id="workspace">
+      <div class="section-heading"><div><p class="eyebrow">Your little workspace</p><h2>What’s on your mind?</h2></div><span class="heading-spark">✳</span></div>
+      <div class="workspace-grid">
+        <section class="card task-card" aria-labelledby="task-title">
+          <div class="card-heading"><div><span class="card-icon green-icon">✳</span><h3 id="task-title">A short list</h3></div><span class="today-label">TODAY</span></div>
+          <p class="card-subtitle">Keep it light. What would feel good to finish?</p>
+          <form id="task-form" class="task-form"><label class="sr-only" for="task-input">Add a task</label><input id="task-input" name="task" type="text" placeholder="Add one small thing…" maxlength="100" required><button type="submit" aria-label="Add task">+</button></form>
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <div class="task-footer"><span id="task-count">0 things on your list</span><button type="button" id="clear-completed">Clear done</button></div>
+        </section>
+
+        <section class="card note-card" aria-labelledby="note-title">
+          <div class="note-top"><span class="card-icon peach-icon">↗</span><span>LEAVE A NOTE</span></div>
+          <h3 id="note-title">Good things<br>start with a hello.</h3>
+          <p>Have an idea, a question, or just want to say hi? We’d love to hear from you.</p>
+          <a href="#contact" class="text-link">Drop us a note <span>↗</span></a>
+          <div class="note-decoration">hello<span>!</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-inner page-wrap">
+        <div class="contact-copy"><p class="eyebrow">We’re listening</p><h2>Let’s make<br><em>something good.</em></h2><p>Send a note and we’ll get back to you soon. No big pitch required.</p><div class="contact-aside"><span class="tiny-star">✳</span><span>Thoughtful conversations<br>begin with one small message.</span></div></div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field-row">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required minlength="2"><small class="error" id="name-error"></small></div>
+            <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@example.com" required><small class="error" id="email-error"></small></div>
+          </div>
+          <div class="field"><label for="message">What’s on your mind?</label><textarea id="message" name="message" rows="4" placeholder="A few words is plenty…" required minlength="10"></textarea><small class="error" id="message-error"></small></div>
+          <div class="form-bottom"><p id="form-status" role="status" aria-live="polite">We’ll only use your email to reply.</p><button class="button button-dark" type="submit">Send your note <span>↗</span></button></div>
+        </form>
+      </div>
+      <div class="footer page-wrap"><a class="brand" href="#home"><span class="brand-mark">f.</span><span>fieldnotes</span></a><span>A little more intentional, every day.</span><span>© 2025 Fieldnotes</span></div>
+    </section>
+  </main>
+</body>
+</html>
