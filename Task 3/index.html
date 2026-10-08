@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="A hands-on playground for responsive design, JavaScript, and APIs.">
+  <title>Frontend Fieldguide — Learn by making</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Frontend Fieldguide home"><span class="brand-mark">&lt;/&gt;</span><span>fieldguide<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="navigation" id="main-nav" aria-label="Main navigation">
+      <a href="#path">Learning path</a><a href="#playground">Playground</a><a href="#api-lab">API lab</a>
+      <a class="nav-cta" href="#playground">Start building <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero page-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR FRONTEND, LEVELLED UP</p>
+        <h1>Make the web<br><em>your playground.</em></h1>
+        <p class="hero-text">A hands-on fieldguide to sharper CSS, thoughtful interactions, and the little details that make a site feel alive.</p>
+        <a class="button button-dark" href="#path">Explore the path <span>↓</span></a>
+        <div class="hero-note"><span class="note-icon">✳</span><span>Three small builds. A lot of new skills.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a code editor with a responsive preview">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-sticker sticker-top">CSS <span>✳</span></div>
+        <div class="browser-window">
+          <div class="browser-bar"><i></i><i></i><i></i><span>your-next-project.dev</span></div>
+          <div class="browser-content"><div class="browser-nav"><b>studio<span>.</span></b><i></i><i></i><i></i></div><div class="browser-title"></div><div class="browser-title short"></div><div class="browser-lines"><i></i><i></i><i></i></div><div class="browser-button"></div><div class="browser-sun"></div></div>
+        </div>
+        <div class="code-card"><span class="code-dot"></span><span class="code-pink">@media</span> <span class="code-yellow">(max-width: 600px)</span> {<br><span class="code-indent">hello, small screens!</span><br>}</div>
+        <div class="art-sticker sticker-bottom"><span>JS</span> in action <b>↗</b></div>
+        <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span>
+      </div>
+      <span class="hero-side">LEARN IT BY MAKING IT <span>✳</span></span>
+    </section>
+
+    <section class="path-section page-wrap" id="path">
+      <div class="section-intro"><div><p class="eyebrow">THE LEARNING PATH</p><h2>Three skills, <em>one step at a time.</em></h2></div><p>Each mini project gives you a practical way to try something new.</p></div>
+      <div class="path-grid">
+        <article class="path-card"><div class="path-card-top"><span class="step-number">01</span><span class="path-icon responsive-icon">◫</span></div><p class="card-kicker">CSS · RESPONSIVE DESIGN</p><h3>Make every screen<br>feel like home.</h3><p>Use media queries to tune layouts, type, and spacing for mobile, tablet, and desktop.</p><a href="#playground" class="card-link">Explore the playground <span>↗</span></a><div class="breakpoint-art"><span>DESKTOP</span><i></i><span>TABLET</span><i></i><span>MOBILE</span></div></article>
+        <article class="path-card"><div class="path-card-top"><span class="step-number">02</span><span class="path-icon quiz-icon">?</span></div><p class="card-kicker">JAVASCRIPT · INTERACTION</p><h3>Turn a click into<br>a little “aha!”.</h3><p>Build a short quiz with real-time feedback, a score, and a fresh question each round.</p><a href="#playground" class="card-link">Take the quiz <span>↗</span></a><div class="quiz-art"><span class="quiz-tile">{ }</span><span class="quiz-tile active">✓</span><span class="quiz-tile">?</span><span class="quiz-art-line"></span></div></article>
+        <article class="path-card"><div class="path-card-top"><span class="step-number">03</span><span class="path-icon api-icon">↗</span></div><p class="card-kicker">JAVASCRIPT · FETCH API</p><h3>Bring the outside<br>web inside.</h3><p>Fetch a fresh programming joke from a public API and render it right in the page.</p><a href="#api-lab" class="card-link">Visit the API lab <span>↗</span></a><div class="api-art"><span>{</span><i></i><i></i><i></i><span>}</span></div></article>
+      </div>
+    </section>
+
+    <section class="playground-section" id="playground">
+      <div class="playground-inner page-wrap">
+        <div class="section-intro playground-heading"><div><p class="eyebrow">A QUICK HANDS-ON</p><h2>Ready for a tiny <em>challenge?</em></h2></div></div>
+        <div class="quiz-layout">
+          <div class="quiz-copy"><span class="quiz-label"><span class="live-dot"></span> INTERACTIVE QUIZ</span><h3>Responsive<br>design basics</h3><p>Question <span id="question-number">1</span> of <span id="question-total">3</span></p><div class="progress-track" aria-label="Quiz progress"><span id="quiz-progress"></span></div><div class="score-pill">✦ <span id="score">0</span> points</div></div>
+          <div class="quiz-panel" aria-live="polite"><p class="question-count" id="question-topic">QUESTION 01 · CSS</p><h3 id="question-text">Which CSS feature lets you apply styles only below a certain screen width?</h3><div class="answer-list" id="answer-list"></div><p class="quiz-feedback" id="quiz-feedback" role="status"></p><button type="button" class="button button-dark next-button" id="next-question" disabled>Next question <span>→</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="api-section page-wrap" id="api-lab">
+      <div class="api-intro"><p class="eyebrow">THE API LAB</p><h2>One fetch.<br><em>Fresh inspiration.</em></h2><p>This card requests a random programming joke from a public API and displays it right here.</p><div class="api-status"><span class="status-dot"></span><span id="api-status" role="status">Ready to fetch something fun</span></div></div>
+      <article class="joke-card"><div class="joke-card-top"><span class="api-badge"><span>↗</span> LIVE API</span><span class="joke-spark">✳</span></div><p class="joke-label">A LITTLE CODE HUMOUR</p><p class="joke-text" id="joke-text">Why do programmers prefer dark mode?<br><span>Because light attracts bugs.</span></p><div class="joke-bottom"><span>Powered by JokeAPI</span><button class="button button-light" id="fetch-joke" type="button">Get another <span>↻</span></button></div></article>
+    </section>
+
+    <section class="closing page-wrap"><div><p class="eyebrow">THAT'S THE WHOLE TRICK</p><h2>Try it. Break it.<br><em>Make it yours.</em></h2></div><a class="button button-dark" href="#home">Back to the top <span>↑</span></a><span class="closing-star">✳</span></section>
+  </main>
+  <footer class="site-footer page-wrap"><a class="brand" href="#home"><span class="brand-mark">&lt;/&gt;</span><span>fieldguide<span class="brand-period">.</span></span></a><span>Built for curious minds and small experiments.</footer>
+</body>
+</html>
